@@ -5,6 +5,9 @@ const babelParser = require('@babel/eslint-parser');
 const compat = new FlatCompat();
 
 module.exports = [
+  {
+    ignores: ['.next/'],
+  },
   ...compat.extends('next/core-web-vitals', 'prettier'),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
